@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilgisayar Parçaları</title>
+    <link rel="stylesheet" href="donanim.css">
+    <script defer src="donanim.js"></script>
+</head>
+<header>
+    <div class="header-buttons">
+     <a href="index.html">Bilgisayar Parçaları</a>
+    <a href="giris.html" id="giris-btn">Giriş Yap</a>
+    <a href="anasayfa.html" id="giris-btn">Ana Sayfa</a>
+    </div>
+    <p class="header-description">Bilgisayar Parçaları</p>
+</header>
+<body background="images/arkaplan.png" style="background-repeat: no-repeat;background-size:cover;">
+    <nav>
+        <ul>
+            <li><a href="#anakart">Anakart</a></li>
+            <li><a href="#islemci">İşlemci</a></li>
+            <li><a href="#power">Power</a></li>
+            <li><a href="#ekrankarti">Ekran Kartı</a></li>
+            <li><a href="#ssd">SSD</a></li>
+            <li><a href="#ram">RAM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="anakart" class="parca-card">
+            <img src="images/anakart.png" alt="Anakart">
+            <h2>Anakart</h2>
+            <p>Bilgisayarın temel bileşenlerinin birbirleriyle iletişim kurmasını sağlayan karttır.</p>
+            <button class="satin-al-btn" data-search="anakart">Satın Al</button>
+        </div>
+        <div id="islemci" class="parca-card">
+            <img src="images/islemci.png" alt="İşlemci">
+            <h2>İşlemci</h2>
+            <p>Bilgisayarın beyni olan ve işlemleri gerçekleştiren parça.</p>
+            <button class="satin-al-btn" data-search="işlemci">Satın Al</button>
+        </div>
+        <div id="power" class="parca-card">
+            <img src="images/power.png" alt="Power">
+            <h2>Power</h2>
+            <p>Bilgisayarın tüm parçalarına elektrik sağlayan güç kaynağı.</p>
+            <button class="satin-al-btn" data-search="power supply">Satın Al</button>
+        </div>
+        <div id="ekrankarti" class="parca-card">
+            <img src="images/ekrankarti.png" alt="Ekran Kartı">
+            <h2>Ekran Kartı</h2>
+            <p>Bilgisayarın görsel verilerini işleyip monitöre gönderen parça.</p>
+            <button class="satin-al-btn" data-search="ekran kartı">Satın Al</button>
+        </div>
+        <div id="ssd" class="parca-card">
+            <img src="images/ssd.png" alt="SSD">
+            <h2>SSD</h2>
+            <p>Hızlı veri erişimi sağlayan katı hal sürücüsü.</p>
+            <button class="satin-al-btn" data-search="ssd">Satın Al</button>
+        </div>
+        <div id="ram" class="parca-card">
+            <img src="images/ram.png" alt="RAM">
+            <h2>RAM</h2>
+            <p>Geçici veri saklama ve hız için kullanılan bellek.</p>
+            <button class="satin-al-btn" data-search="ram">Satın Al</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Emre Erol Tarafından Geliştirildi (JavaScript icin ChatGpt Kullanılmıştır)</p>
+    </footer>
+</body>
+</html>
