@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Header ve Butonlar */
+/* Header ve Butonlar */
+/* Header ve Butonlar */
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Butonlar arasında boşluk */
+    margin-top: 20px;
+}
+
+.header-buttons button,
+.header-buttons a {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Neon Efekti */
+.header-buttons button::before,
+.header-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(45deg, yellow,rgba(128, 128, 128, 0.566),yellow);
+    filter: blur(6px); /* Daha soft bir blur efekti */
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.header-buttons button:hover,
+.header-buttons a:hover {
+    color: #000000;
+    background-color: #00ffcc;
+    border-color: #ff00cc;
+    box-shadow: 0 0 12px #00ffcc, 0 0 20px #ff00cc;
+}
+
+.header-buttons button:hover::before,
+.header-buttons a:hover::before {
+    opacity: 1;
+}
+
+/* Aktif Durum */
+.header-buttons button:active,
+.header-buttons a:active {
+    transform: scale(0.95);
+}
+
+.header-description {
+    margin-top: 15px;
+    font-size: 1.8em;
+    color: #00ffcc; /* Neon renk */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Neon etkisi */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffcc00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #333;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+@keyframes rotate-border {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 5px 3px rgba(255, 204, 0, 0.7);
+    }
+    50% {
+        border-color: rgba(255, 204, 0, 0.7);
+        box-shadow: 0 0 5px 3px rgba(255, 204, 0, 0.7);
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 5px 3px rgba(255, 204, 0, 0.7);
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    transition: 0.7s;
+}
+footer p {
+    font-size: 1.2em;
+    filter: brightness(0%)blur(2px);
+    transition: 0.7s;
+}
+footer p:hover{
+    filter: brightness(100%)blur(0px);
+    transition: 0.7s;
+}
+/* Genel Buton Stili */
+.satin-al-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.satin-al-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #000000, #ff13d0, #948247);
+    filter: blur(10px);
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.satin-al-btn:hover {
+    color: #000000;
+    background-color: #00ffcc;
+    border-color: #ff00cc;
+    box-shadow: 0 0 20px #00ffcc, 0 0 40px #ff00cc;
+}
+
+.satin-al-btn:hover::before {
+    opacity: 1;
+}
+.satin-al-btn:active {
+    transform: scale(0.95);
+}
+.parca-card {
+    position: relative;
+    display: none;
+    width: 300px;
+    margin: 20px;
+    opacity: 0;
+    border: 3px solid transparent; 
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #202020;
+    border-radius: 12px;
+    visibility: hidden;
+    background-clip: padding-box; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parca-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+.parca-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 3px solid #00ffcc;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: 0.6s;
+}
+.parca-card.active {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: rotate-border 3s linear infinite;
+}
+.parca-card img:hover {
+    transition: 0.6s;
+    transform: scale(1.05);
+}
+.parca-card h2 {
+    font-size: 1.8em;
+    color:#948247;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+.parca-card p {
+    font-size: 1.1em;
+    color: #ffffff75;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+.parca-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
